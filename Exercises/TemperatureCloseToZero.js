@@ -1,8 +1,6 @@
-const ts = [-5, 4, 8, 4, -3, 6];
-const list = [56, 92, 3, 30, 77, 85, 42, 6, 71, 9, 25, 63, 48, 80, 33, 17, 96, 50, -2, 88, -3];
+const list = [56, 92, 3, 30, 77, 85, 1, 6, 71, 9, 25, 63, 48, 80, 33, 17, 96, 50, -2, 88, -3];
 
-
-function computeClosestToZero(ts) {
+function closestToZero(ts) {
 
     if(ts.length === 0 ) return 0;
         
@@ -33,4 +31,35 @@ function computeClosestToZero(ts) {
     }
 }
 
-console.log(computeClosestToZero(list));
+const closestToZeroV2 = (list) => {
+
+    if(list.length === 0) return 0;
+
+    let pivot = list[0];
+
+    for (let i = 1; i < list.length; i++) {
+        if(pivot < 0 && list[i] < 0 && Math.abs(pivot) > Math.abs(list[i])){
+            pivot = list[i];
+            continue;
+        }
+        
+        if(pivot < 0 && list[i] > 0 && Math.abs(pivot) === list[i]){
+            pivot = list[i];
+            continue;
+        }
+        
+        if(pivot > 0 && list[i] < 0 && pivot > Math.abs(list[i])){
+            pivot = list[i];
+            continue;
+        }
+        
+        if(pivot > 0 && list[i] > 0 && pivot > list[i]){
+            pivot = list[i];
+            continue;
+        }
+    }
+
+    return pivot;
+}
+
+console.log(closestToZeroV2(list));
