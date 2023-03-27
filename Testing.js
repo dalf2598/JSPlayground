@@ -1,12 +1,30 @@
-const petNames = new Map();
+function convertToRoman(num) {
+    const romanNumerals = {
+        M: 1000,
+        CM: 900,
+        D: 500,
+        CD: 400,
+        C: 100,
+        XC: 90,
+        L: 50,
+        XL: 40,
+        X: 10,
+        IX: 9,
+        V: 5,
+        IV: 4,
+        I: 1
+    };
 
-petNames.set('dog', ['Capo','Vecino']);
-petNames.set('cat', ['Cornelia', 'Mortadela']);
+    let roman = "";
 
-//console.log(Number.isInteger(Math.sqrt(15)));
+    for (let key in romanNumerals) {
+        while (num >= romanNumerals[key]) {
+            roman += key;
+            num -= romanNumerals[key];
+        }
+    }
 
-const list = [8,2,9]
-list.sort((a,b) => a - b);
+    return roman;
+}
 
-let j = 0;
-console.log(8 % 3)
+console.log(convertToRoman(3989)); // Output: XII
