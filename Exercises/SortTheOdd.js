@@ -11,4 +11,4 @@ function sortArrayV2(array) {
     return array.map((x) => x % 2 ? odd.shift() : x);
   }
 
-console.log(sortArrayV2(array));
+console.log(sortArray(array));
