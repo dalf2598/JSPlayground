@@ -8,4 +8,5 @@ petNames.set('cat', ['Cornelia', 'Mortadela']);
 const list = [8,2,9]
 list.sort((a,b) => a - b);
 
-console.log(list);
+let j = 0;
+console.log(String(j));
