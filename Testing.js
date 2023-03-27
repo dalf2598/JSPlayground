@@ -9,4 +9,4 @@ const list = [8,2,9]
 list.sort((a,b) => a - b);
 
 let j = 0;
-console.log(String(j));
+console.log(8 % 3)
