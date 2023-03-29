@@ -4,7 +4,7 @@ function digPow(number, exponent){
     return (sum % number === 0) ? sum/number : -1;
 }
 
-function digPowV2(n, p) {
+function digPow(n, p) {
     var x = String(n).split("").reduce((s, d, i) => s + Math.pow(d, p + i), 0)
     return x % n ? -1 : x / n
 }
