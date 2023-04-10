@@ -1,13 +1,10 @@
-const adjacents = new Map();
-adjacents.set('1000', [1,3]);
-adjacents.set('600', [6,3]);
-adjacents.set('500', [5,3]);
-adjacents.set('400', [4,3]);
-adjacents.set('300', [3,3]);
-adjacents.set('200', [2,3]);
-adjacents.set('100', [1,1]);
-adjacents.set('50', [1,5]);
+const arr = ['', '^', '^'];
 
-adjacents.forEach((value, key) => {
-    console.log(value + ' ' + key);
-});
+let result = arr.reduce((accumulator, currentValue) => {
+    return (currentValue === '^') ? accumulator + 1 : accumulator;
+}, 0);
+
+const values = [ 8, 7, 5, 11, 6 ];
+let temp = values.sort((a,b) => a - b)[0];
+
+console.log(Math.ceil(temp/2));
