@@ -7,4 +7,7 @@ let result = arr.reduce((accumulator, currentValue) => {
 const values = [ 8, 7, 5, 11, 6 ];
 let temp = values.sort((a,b) => a - b)[0];
 
-console.log(Math.ceil(temp/2));
+const remainder = 16/5;  
+
+const value = 255;
+console.log(value.toString(16));
