@@ -61,4 +61,5 @@ function longestSlideDown(pyramid) {
   return builder(root, 1, 0);
 }
 
-console.log(longestSlideDown(pyramid));
+//console.log(longestSlideDown(pyramid));
+console.log(2**3);
