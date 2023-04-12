@@ -73,7 +73,7 @@ const depthMaxRouteAddition = (root) =>{
 
     if(root.right === null && root.left === null) return root.val;
     
-    return Math.max(root.val + depthMaxRouteAddition(root.left), root.val + depthMaxRouteAddition(root.right));
+    return Math.max(root.val + maxRoute(root.left), root.val + maxRoute(root.right));
 }
 
 const height = (root) =>{
@@ -145,5 +145,5 @@ const breadthFirstMinimun = (root) =>{
 
 // console.log(depthFirstAddition(a));
 // console.log(breadthFirstMinimun(a));
-console.log(depthMaxRouteAddition(a));
+console.log(maxRoute(a));
 console.log(height(a));
