@@ -62,4 +62,6 @@ function longestSlideDown(pyramid) {
 }
 
 //console.log(longestSlideDown(pyramid));
-console.log(2**3);
+let values = [5,6,7,9]
+
+console.log(values.sort());
