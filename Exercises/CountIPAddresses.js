@@ -4,14 +4,8 @@ const end = "50.1.1.1";
 function ipsBetween(aStart, aEnd){
     let start = aStart.split('.'); let end = aEnd.split('.');  
     let result = 0;
-    let flag = true;
-
+  
     for (let i = 0; i < 4; i++) {
-        if(end[i] > start[i] && flag){
-            result += (end[i] - start[i]) * 2 **( 8 * (3 - i)); 
-            flag = false;
-            continue;
-        }
         if(end[i] > start[i]){
             result += (end[i] - start[i]) * 256 **(3 - i); 
         }else{
@@ -36,3 +30,4 @@ function ipsBetweenV2(start, end){
 }
 
 console.log(ipsBetween(start,end));
+console.log(ipsBetweenV2(start,end));

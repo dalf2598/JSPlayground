@@ -62,4 +62,4 @@ function longestSlideDown(pyramid) {
 }
 
 //console.log(longestSlideDown(pyramid));
-console.log(2**3);
+console.log(Math.ceil(3/2));
